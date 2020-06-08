@@ -179,5 +179,5 @@ Notes are based on my summary and lecture materials.
 		* Pooling size
 		* Stride 
 	* Max pooling
-* **Full connected layer
+* **Full connected layer**
 
