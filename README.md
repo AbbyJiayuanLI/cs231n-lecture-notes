@@ -68,7 +68,7 @@ Notes are based on my summary and lecture materials.
 
 # 3. Loss Function and Optimization
 
-* - **Loss Function** - acquire optimal w and b
+* **Loss Function** - acquire optimal w and b
 	* Data Loss L
 	* Hyper-parameter  and Regularization Loss :  simpler model, less complexity
 		* L1 regularization: encourage sparsity (see reference) 
@@ -102,16 +102,16 @@ Notes are based on my summary and lecture materials.
 		* Output 能做为下一次input？神经网络
 
 * **Extra Notes:**
-* 关于稀疏解：https://zhuanlan.zhihu.com/p/50142573
-	* 从图像理解，L1用棱形逼近，解大多在坐标轴上 
-	* 从导数理解，绝对值导数突变（同理，绝对值相当于逼出来一个角），或者考虑梯度下降（不太懂）
-	* 从先验概率分布角度解释，（后可研究，十分巧妙）
-* 关于复杂度和regularization：
-	* Minimize  L = Li (data loss) + lambda*R(w) (regularization)
-		Data loss 反映accuracy，regularization反映模型复杂度，所以在minimize L时有一个accuracy和模型复杂度之间的tradeoff（因为两者线性相加）。  
-    min R(w)—>低复杂度
-	* 再单从定义上看，L1: R(w)=sum(|wi|)，L2: R(w)=sum(wi^2)，minimize R(w)时会使|wi|尽可能小。
-    Min R(w) —> min |wi|
-	* 所以问题就是 min |wi|为什么对应低复杂度？ 因为y=wx，如果有wi很大，那么对应的xi在变化很小的时候会引起剧烈的变化。而越简单的模型应该变化越小。
+    * 关于稀疏解：https://zhuanlan.zhihu.com/p/50142573
+		* 从图像理解，L1用棱形逼近，解大多在坐标轴上 
+		* 从导数理解，绝对值导数突变（同理，绝对值相当于逼出来一个角），或者考虑梯度下降（不太懂）
+		* 从先验概率分布角度解释，（后可研究，十分巧妙）
+    * 关于复杂度和regularization：
+		* Minimize  L = Li (data loss) + lambda*R(w) (regularization)
+			Data loss 反映accuracy，regularization反映模型复杂度，所以在minimize L时有一个accuracy和模型复杂度之间的tradeoff（因为两者线性相加）。  
+    		min R(w)—>低复杂度
+		* 再单从定义上看，L1: R(w)=sum(|wi|)，L2: R(w)=sum(wi^2)，minimize R(w)时会使|wi|尽可能小。
+    		Min R(w) —> min |wi|
+		* 所以问题就是 min |wi|为什么对应低复杂度？ 因为y=wx，如果有wi很大，那么对应的xi在变化很小的时候会引起剧烈的变化。而越简单的模型应该变化越小。
 
 
