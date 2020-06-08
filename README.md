@@ -9,13 +9,13 @@ Notes are based on my summary and lecture materials.
 * Limited by data (labeled), computation (chip, GPU)
 * ImageNet competition
 * **Breakthrough** : CNN in computer vision - 2012
-* Image classification
+* **Image classification**
     * Object detection
     * Action classification
     * Image captioning 
-* CNN Development:
+* **CNN Development:**
     * LeCun 1998: digits recognition
-* Open Questions:
+* **Open Questions:**
     * Semantic Segmentation
     * Perceptual Grouping
     * Activity Recognition
@@ -74,5 +74,4 @@ Notes are based on my summary and lecture materials.
 问题：
 解释数据集划分
 猫多于狗，猫的bias term会更大
-
 
