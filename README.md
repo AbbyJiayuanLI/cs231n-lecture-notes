@@ -4,11 +4,11 @@ This is the collection of my notes on the course [CS231n: Convolutional Neural N
 Notes are based on my summary and lecture materials.
 	
 ## Content
-	* [1. Introduction](#1-introduction)
+* [1. Introduction](#1-introduction)
 * [2. Image Classification](#2-image-classification)
 * [3. Loss Function and Optimization](#3-loss-function-and-optimization)
-* [4. Neural Network and Back-Propagation](# 4. Neural Network and Back-Propagation)
-* [5. Convolutional Neural Network](# 5. Convolutional Neural Network)
+* [4. Neural Network and Back-Propagation](#4-neural-network-and-back-propagation)
+* [5. Convolutional Neural Network](#5-convolutional-neural-network)
     
     
 ## 1. Introduction
