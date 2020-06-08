@@ -100,6 +100,7 @@ Notes are based on my summary and lecture materials.
 		* Histogram of Orient Gradients (HoG)
 		* Bag of words
 		* Output 能做为下一次input？神经网络
+    * 图片3
 
 * **Extra Notes:**
     * 关于稀疏解：https://zhuanlan.zhihu.com/p/50142573
@@ -113,5 +114,38 @@ Notes are based on my summary and lecture materials.
 		* 再单从定义上看，L1: R(w)=sum(|wi|)，L2: R(w)=sum(wi^2)，minimize R(w)时会使|wi|尽可能小。
     		Min R(w) —> min |wi|
 		* 所以问题就是 min |wi|为什么对应低复杂度？ 因为y=wx，如果有wi很大，那么对应的xi在变化很小的时候会引起剧烈的变化。而越简单的模型应该变化越小。
+
+
+# 4. Neural Network and Back-Propagation
+
+* **Computational Graph:  
+	* calculate analytical gradient of complex functions  
+	* break down calculation for large, complex matrix
+* **Back Propagation:**  recursive chain rule 
+	* local gradient
+		* Step-by-step 
+		* Local Input — Chain Rule
+		* Transfer of gradient: output gradient = upstream gradient * local gradient
+	* 图片4
+* Patterns in BP:
+	* Sigmoid Function: 
+		* \sigma(x) = \frac{1}{1+e^{-x}}
+		* \frac{d\sigma(x)}{dx} = (1-\sigma(x))\sigma(x)
+	* Add Gate: gradient distributor 
+	* Max Gate: gradient router - only max branch exerts influence and be adjusted
+	* Mul Gate: gradient switcher
+	* Gradient Adds
+	* 图片5
+* **Vectorization** — element-wise (important) 
+	* Jacobian Matrix
+	* 图片6
+* Neural Network
+	* Nonlinear Combination of linear layers 
+	* Multi-discipline, integration of templates 
+	* Active Function
+	* 图片7
+* Future Discussion:
+	* Choice of Active Function
+	* Network Structure/Architecture
 
 
