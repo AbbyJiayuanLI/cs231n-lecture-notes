@@ -69,8 +69,8 @@ Notes are based on my summary and lecture materials.
 # 3. Loss Function and Optimization
 
 * **Loss Function** - acquire optimal w and b
-	* Data Loss L
-	* Hyper-parameter  and Regularization Loss :  simpler model, less complexity
+	* Data Loss `L`
+	* Hyper-parameter `lambda` and Regularization Loss `R(w)`:  simpler model, less complexity
 		* L1 regularization: encourage sparsity (see reference) 
 		* L2 regularization: derivative
 		* Elastic Net = L1+L2
