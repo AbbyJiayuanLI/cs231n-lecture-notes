@@ -2,16 +2,16 @@
 This is the collection of my notes on the course [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) from Stanford University. 
 
 Notes are based on my summary and lecture materials.
-
-# Content
-    * [Introduction](# 1. Introduction)
-    * [Image Classification](# 2. Image Classification)
-    * [Loss Function and Optimization](# 3. Loss Function and Optimization)
-    * [Neural Network and Back-Propagation](# 4. Neural Network and Back-Propagation)
-    * [Convolutional Neural Network](# 5. Convolutional Neural Network)
+	
+## Content
+	* [1. Introduction](#1-introduction)
+* [2. Image Classification](#2-image-classification)
+* [3. Loss Function and Optimization](#3-loss-function-and-optimization)
+* [4. Neural Network and Back-Propagation](# 4. Neural Network and Back-Propagation)
+* [5. Convolutional Neural Network](# 5. Convolutional Neural Network)
     
     
-# 1. Introduction
+## 1. Introduction
 
 * Limited by data (labeled), computation (chip, GPU)
 * ImageNet competition
@@ -30,7 +30,7 @@ Notes are based on my summary and lecture materials.
     * Description of Image
     * Second/Hidden Meaning
 
-# 2. Image Classification
+## 2. Image Classification
 
 * Image Classification:  assign fix category labels
 * Problem:
@@ -73,7 +73,7 @@ Notes are based on my summary and lecture materials.
         * **Insight: w as a template, and inner product shows the similarity**
 
 
-# 3. Loss Function and Optimization
+## 3. Loss Function and Optimization
 
 * **Loss Function** - acquire optimal w and b
 	* Data Loss `L`
@@ -123,7 +123,7 @@ Notes are based on my summary and lecture materials.
 		* 所以问题就是 min |wi|为什么对应低复杂度？ 因为y=wx，如果有wi很大，那么对应的xi在变化很小的时候会引起剧烈的变化。而越简单的模型应该变化越小。
 
 
-# 4. Neural Network and Back-Propagation
+## 4. Neural Network and Back-Propagation
 
 * **Computational Graph:  
 	* calculate analytical gradient of complex functions  
@@ -156,7 +156,7 @@ Notes are based on my summary and lecture materials.
 	* Network Structure/Architecture
 
 
-# 5. Convolutional Neural Network
+## 5. Convolutional Neural Network
 
 * Layer 
 	* Full connected layer: stretch out
