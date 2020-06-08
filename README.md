@@ -1,5 +1,5 @@
 # cs231n-lecture-notes
-This is the collection of my notes on the course [CS231n: Convolutional Neural Networks for Visual Recognition from Stanford University](http://cs231n.stanford.edu/). 
+This is the collection of my notes on the course [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) from Stanford University. 
 
 Notes are based on my summary and lecture materials.
 
@@ -23,30 +23,29 @@ Notes are based on my summary and lecture materials.
     * Description of Image
     * Second/Hidden Meaning
 
-
 # 2. Image Classification
 
 * Image Classification:  assign fix category labels
 * Problem:
     * Semantic Gap: between concept/semantic idea and pixel values
 * Viewpoint Variation
-	* Illumination
-	* Deformation
-	* Occlusion 遮挡
-	* Background clutter (similar texture)
-	* Interclass Variation
+    * Illumination
+    * Deformation
+    * Occlusion 遮挡
+    * Background clutter (similar texture)
+    * Interclass Variation
 * **Data-driven Approach**
 * **First Classifier: Nearest Neighbor**
-	* L1 (Manhattan) Distance: depends on choice of coordinate
-	* L2 (Euclidean) Distance:
-	* 图片1
+    * L1 (Manhattan) Distance: depends on choice of coordinate
+    * L2 (Euclidean) Distance:
+    * 图片1
 
 * **K-nearest Neighbor:** smooth out decision boundary
-	* Vote weighted on distance
-	* Majority Vote
+    * Vote weighted on distance
+    * Majority Vote
 * Generalization of Algorithm:  extended by choosing proper distance matrix
 * Hyper-parameters: problem-dependent
-	* K neighbors
+    * K neighbors
 	* Distance Matrix
 * Choice of hyper-parameters:
 	* Best Training Performance (X)
