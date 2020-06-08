@@ -3,7 +3,14 @@ This is the collection of my notes on the course [CS231n: Convolutional Neural N
 
 Notes are based on my summary and lecture materials.
 
-
+# Content
+    * [Introduction](# 1. Introduction)
+    * [Image Classification](# 2. Image Classification)
+    * [Loss Function and Optimization](# 3. Loss Function and Optimization)
+    * [Neural Network and Back-Propagation](# 4. Neural Network and Back-Propagation)
+    * [Convolutional Neural Network](# 5. Convolutional Neural Network)
+    
+    
 # 1. Introduction
 
 * Limited by data (labeled), computation (chip, GPU)
@@ -148,4 +155,29 @@ Notes are based on my summary and lecture materials.
 	* Choice of Active Function
 	* Network Structure/Architecture
 
+
+# 5. Convolutional Neural Network
+
+* Layer 
+	* Full connected layer: stretch out
+	* Convolutional Layer:  maintain spatial structure, local connectivity 
+* Application 
+	* Classification
+	* Retrieval
+	* Detection
+	* Segmentation
+	* Image Captioning 
+* **Convolution Layer**:  WTx+b(1num)
+	* Num of Filter: Multiple filter
+	* Filter Type
+	* Filter Size
+	* Stride/Step Size
+	* Zero-padding 
+	* 图片8
+* **Pooling Layer**
+	* Hyper-parameter
+		* Pooling size
+		* Stride 
+	* Max pooling
+* **Full connected layer
 
