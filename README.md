@@ -181,3 +181,92 @@ Notes are based on my summary and lecture materials.
 	* Max pooling
 * **Full connected layer**
 
+
+## 6. Training Neural Network-1
+
+* **Activate Function**
+	* **Sigmoid Function**: 1/(1+e^-x)
+		* Good:
+			* Squash to range [0,1]
+		* Bad:
+			* Saturated neuron kills gradients
+			* Output not zero-centering, as local gradient has the same sign as x which may all be in same sign. Therefore cause zig zag update.              (so look for zero-mean data)
+			* Exponential is a little bit computational expensive
+			* 图片9
+	* Tanh(x)
+		* Good:
+			* Squash to range [-1,1]  —>  zero-centering
+		* Bad:
+			* Still saturation problem
+	* **ReLu** (Rectified Linear Unit):  f(x) = max(0, x)
+		* Good:
+			* Not saturated in +region
+			* Computational efficient
+			* Converge faster
+		* Bad:
+			* Not zero-centering
+			* Kill gradient in -region —>  negative ReLu never update  —>  Initialization 
+	* Leaky ReLu:  f(x) = max(0.1x, x)
+		* Good:
+			* No saturation
+			* Computational efficient
+			* Converge faster
+			* Will not die
+	* PReLu (Parametric Rectifier):   f(x) = max(ax, x)
+	* ELU (Exponential Linear Unit)
+		* Good:
+			* Benefit of ReLu
+			* More zero-center output
+			* Robust to noise in -region than Leaky ReLu
+		* Bad:
+			* Computation requires exponential
+	* Maxout:  max(w1Tx+b1, w2Tx+b2)
+		* Good:
+			* Generalize ReLu and Leaky ReLu
+			* Linear regime, not saturate and die
+		* Bad:
+			* Doubles the num of parameters
+	* **In Summary**:
+		* Use ReLu, adjust learning rate
+		* Try Leaky ReLu / Maxout / ELU
+		* Try tanh, but don’t expect too much
+		* Don’t use Sigmoid
+* **Data Reprocessing**
+	* **Zero-mean**
+		* Mean image
+		* per-channel mean
+	* Normalization 
+	* PCA
+	* Whitening
+* **Weight Initialization**
+	* Initialized with 0
+		* All neuron do same thing
+	* Initialized with random std gaussian small number
+		* Activation becomes 0
+		* Gradient small, little update
+	* Initialized with random std gaussian large number
+		* Saturate and die
+		* Gradient small, little update 
+	* **Xavier Initialization**: scale std gaussian 
+		* But collapse in ReLu
+		* Extra division of 2 for the half kill in ReLu
+* Batch Normalization
+	* Usually after FC or Conv layer, before nonlinearity 
+	* Normalization + restoring scaling and shifting
+* Babysitting Learning Process
+	* Preprocess 
+	* Choose architecture 
+	* Double check loss with and without regularization
+	* Overfit small data set
+	* Small regularization and find learning rate  (1e^-3, 1e^-5)
+* Hyper-parameter Optimization 
+	* Cross-validation
+	* Fist stage: only a few epochs to get range
+	* Second stage: longer time, finer search
+	* Random search
+	* Grid Search
+
+
+
+
+
