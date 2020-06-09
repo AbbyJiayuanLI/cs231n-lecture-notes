@@ -9,6 +9,8 @@ Notes are based on my summary and lecture materials.
 * [3. Loss Function and Optimization](#3-loss-function-and-optimization)
 * [4. Neural Network and Back-Propagation](#4-neural-network-and-back-propagation)
 * [5. Convolutional Neural Network](#5-convolutional-neural-network)
+* [6. Training Neural Network-1](#6-training-neural-network-1)
+* [7. Training Neural Network-2](#6-training-neural-network-2)
     
     
 ## 1. Introduction
@@ -265,8 +267,49 @@ Notes are based on my summary and lecture materials.
 	* Second stage: longer time, finer search
 	* Random search
 	* Grid Search
+	* 图片10
 
 
+## 7. Training Neural Network-2
+
+* **Fancier Optimization**
+	* SGD: zig-zag when one direction sensitive the other not
+		* Local Min / Saddle Point  —> gradient = 0
+		* Stochastic  —>  noise 
+	* **SGD+Momentum**: add momentum from current velocity
+	* SGD+Nesterov Momentum: compute gradient after a step in velocity direction
+	* **AdaGrad**: SGD+square gradient
+		* Slower with time, which is good in convex, bad in non-convex
+	* RMSProp: SGD + decay rate*square gradient
+	* **Adam**: SGD + Momentum + square gradient + bias
+* Learning Rate Decay:
+	* Common in SGD+Momentum, not in Adam
+* Second-oder Optimization:
+	* Newton Method
+		* Not practical as we have Hessian 
+	* Quasi-Newton Method
+		* Approximate inverse Hessian
+	* L-BFGS (limit memory BFGS)
+		* Works well in full batch, not mini batch
+* **In summary, use Adam first, and try L-BFGS if full batch and less stochasticity**
+* Model Ensemble 
+	* Multiple Models
+	* Single Model multiple shots
+* egularization
+	* Dropout 
+		* Expectation = dropout prob * dropout output
+	* Inverted Dropout
+		* Test time use entire weight matrix
+	* Batch Normalization
+	* Data Augmentation 
+		* Random Crops and Scale
+		* Color Jitter
+	* Drop Connect
+	* Fractional Max Pooling
+	* Stochastic Depth
+* Transfer Learning
 
 
-
+Adam 不能解决什么?? 
+Common in SGD+Momentum, not in Adam??
+L-BFGS —  stochasticity 
