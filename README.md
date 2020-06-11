@@ -11,7 +11,10 @@ Notes are based on my summary and lecture materials.
 * [5. Convolutional Neural Network](#5-convolutional-neural-network)
 * [6. Training Neural Network-1](#6-training-neural-network-1)
 * [7. Training Neural Network-2](#6-training-neural-network-2)
-    
+* [8. Deep Learning Software](#8-deep-learning-software)
+* [9. CNN Architectures](#9-cnn-architectures)
+* [10. Recurrent Neural Networks](#10-recurrent-neural-networks)
+* [11. Detection and Segmentation](#11-detection-and-segmentation)
     
 ## 1. Introduction
 
@@ -315,6 +318,69 @@ Common in SGD+Momentum, not in Adam??
 L-BFGS —  stochasticity 
 
 
+## 8. Deep Learning Software
+
+* CPU vs GPU
+	* CPU
+		* Small
+		* Faster clock
+		* Memory shared with system
+	* GPU (graphics processing unit)
+		* Large
+		* More cores - parallel 
+		* Independent RAM and caching
+		* Used in matrix multiplication
+* **Deep Learning Framework**:
+	* Reason for it:
+		* Easily build bog computational graph
+		* Easily compute gradient
+		* Run efficiently on GPU 
+	* Caffe / Caffe2
+	* Theano / Tensorflow
+		* Build graph
+		* Compute Loss
+		* Update 
+			* Using dummy node with tf.group
+			* Using optimizer with optimizer.minimize
+		* Keras Package 
+		* Static Graph
+	* Torch / PyTorch
+		* nn Package
+		* Dynamic Graph
+
+
+## 9. CNN Architectures
+
+* **LeNet**
+	* 1998 Yann LeCun
+	* Digit Recognition
+	* CONV-POL-CONV-POL-FC-FC
+* **AlexNet**
+	* 2012 krizhevsky 
+	* ImageNet, first DL based
+	* (CONV+POL+NORM)*2+CONV*3+POL+FC*3
+	* First use ReLu and Norm Layer
+	* Splitted in two GPU
+* **VGG**
+	* 2014 Oxford 
+	* 3*(CONV*2+POOL)+2*(CONV*3/4 +POOL)+FC
+	* Smaller filter, Deeper network, fewer parameters:  3 stacked 3x3 = 1 7x7
+* **GoogLeNet**
+	* 2014
+	* (CONV+POOL) *m+ (Inception Module)*n + Linear Classifier + (auxiliary output for finer training)
+	* Deeper network with computational efficiency
+		* Efficient Inception module: 
+			* different parallel operations on the same input
+			* Filter concatenation to increase depth (only grow as pooling is inside)
+			* Computation Complexity
+			* Bottleneck Layer —> reduce depth and preserve dimension using 1x1 filter
+		* No extra FC Layer —> less parameter
+* ResNet
+	* 2015
+	* Very deep
+	* Residual Connection - learn by +-
+
+
 ## 10. Recurrent Neural Networks
 
 * Language Modeling
@@ -348,6 +414,48 @@ L-BFGS —  stochasticity
 		* 图片12
 * Undisrupted Gradient Flow
 	* 图片13
+
+
+## 11. Detection and Segmentation
+
+* Classification + Localization
+	* Two FC: class scores and box coordinate
+* Pose Estimation
+* Regression Loss: continuous 
+	* L1
+	* L2
+* Classification: categorial 
+	* Cross entropy
+	* Softmax
+	* SVM Loss
+* **Object Detection**
+	* Unknown nums of object
+	* Sliding 
+		* Hard to determine Block pos and range 
+	* Region proposal
+		* R-CNN
+		* Fast RNN
+		* Faster RNN
+	* Without Proposal: regression
+		* YOLO
+			* Offset
+			* Score 
+		* SSD (single shot detection)
+* **In summary, faster RNN is slower but more accurate then SSD**
+* Instance Segmentation
+	* Mask RCNN
+* **Semantic Segmentation**
+	* Two caws within same block (cannot differentiate)
+	* Sliding window
+	* Stack of CNN / Fully Convolutional 
+		* Downsampling
+		* Upsampling 
+			* Nearest Neighbor
+			* Bed of Nails 
+			* Max unpooling
+			* Transpose convolution: learnable
+
+
 
 
 
