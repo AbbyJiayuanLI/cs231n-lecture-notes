@@ -313,3 +313,47 @@ Notes are based on my summary and lecture materials.
 Adam 不能解决什么?? 
 Common in SGD+Momentum, not in Adam??
 L-BFGS —  stochasticity 
+
+
+## 10. Recurrent Neural Networks
+
+* Language Modeling
+	* Character level
+	* Word level
+* **RNN**: transition matrix???
+	* One to many
+		* Example: Image Captioning
+			* image ==> sequence of words
+	* Many to One
+		* Example: Sentiment Classification
+			* sequence of words ==> sentiment
+	* Many to many
+		* Example: Machine Translation
+			* seq of words in one language ==> seq of words in another language
+		* Example: Video classification on frame level
+* Truncated Propagation through Time (有点没懂)
+* Image Captioning
+	* CONV+RNN
+	* With Attention: vocabulary and image location
+* Visual Question Answering
+* Multi-Layer RNN
+* Vallina RNN Gradient Flow
+	* Explode  —> gradient clipping
+	* Vanish   —> more complex RNN
+	* 图片11
+* LSTM (Long Short-Term Memory) 1977
+	* Hidden state ht
+	* Cell state ct
+	* Structure 
+		* 图片12
+* Undisrupted Gradient Flow
+	* 图片13
+
+
+
+
+
+
+
+
+
