@@ -4,6 +4,7 @@ This is the collection of my notes on the course [CS231n: Convolutional Neural N
 Notes are based on my summary and lecture materials. Some points are omitted due to time limitation. For detail notes, you may refer to [CS231n-2017-Summary](https://github.com/mbadry1/CS231n-2017-Summary) by [mbadry1](https://github.com/mbadry1).
 	
 ## Content
+* [Demos](##demos)
 * [1. Introduction](#1-introduction)
 * [2. Image Classification](#2-image-classification)
 * [3. Loss Function and Optimization](#3-loss-function-and-optimization)
@@ -15,6 +16,10 @@ Notes are based on my summary and lecture materials. Some points are omitted due
 * [9. CNN Architectures](#9-cnn-architectures)
 * [10. Recurrent Neural Networks](#10-recurrent-neural-networks)
 * [11. Detection and Segmentation](#11-detection-and-segmentation)
+    
+
+## Demos
+Here is the link for some [official demos](http://vision.stanford.edu/teaching/cs231n-demos/) including [knn](http://vision.stanford.edu/teaching/cs231n-demos/knn/) and [linear classification](http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/).
     
 ## 1. Introduction
 
