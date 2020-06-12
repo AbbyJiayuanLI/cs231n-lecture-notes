@@ -25,7 +25,7 @@ Other useful links:
 * [9. CNN Architectures](#9-cnn-architectures)
 * [10. Recurrent Neural Networks](#10-recurrent-neural-networks)
 * [11. Detection and Segmentation](#11-detection-and-segmentation)
-    
+* [12. Visualizing and Understanding](#12-visualizing-and-understanding)  
 
 ## Demos
 Here is the link for some official demos including:
@@ -473,11 +473,65 @@ L-BFGS —  stochasticity
 	* Mask RCNN
 
 
+## 12. Visualizing and Understanding
+
+* **Visualize CONV Layer**
+	* Visualize filter of the first layer from the idea of templating
+* **Visualize FC Layer**
+	* Nearest Neighbor in feature space not in pixel space
+	* PCA(principle component analysis):  dimension reduction to 2
+	* t-SNE (t-distributed stochastic neighbor embeddings)
+* **Visualize Activation Map**
+* **Maximally Activating Patches**: 
+	* try different patch and sort them
+* **Occlusion Experiments**: 
+	* mask and compare result
+* **Saliency Maps**: 
+	* compute gradient of class score to pixel
+	* May be used in segmentation without supervision
+* **Intermedia Feature** through **Guided BP**:
+	* compute gradient of intermedia value to pixel
+	* Only through ReLu (guided)
+* **Gradient Ascent**:   generative
+	* Maximize score in neuron
+	* Weight w kept, change pixel value x
+	* Regularization to keep image from overfitting
+		* L2
+		* L2 + :
+			* gaussian blurring 
+			* clip small value pixel to 0 
+			* clip small gradient pixel to 0
+	* Process:
+		* Initial with zero-value Image
+		* Forward and back-prop
+		* Update
+* **Fooling image**
+	* Process 
+		* Start from arbitrary image 
+		* Pick arbitrary class
+		* Modify image to maximize class score
+	* In reality, just some noise and they appears the same in human eyes
+* **DeepDream**: Amplify existing features
+	* Process
+		* Forward: compute chosen layer activations
+		* Set chosen layer gradient to activations
+		* BP: calculate gradient
+		* Update image
+* **Feature Inversion**
+	* Match feature vectors (min their error)
+* **Texture Synthesis**
+	* Nearest Neighbor
+	* Gram matrix: co-occurrence
+* **Neural Texture Synthesis**
+	* Compute Gram Matrix
+* **Neural Style Transfer**: feature inversion + texture synthesis 
+	* Minimize feature matching loss and gram matrix loss
+	* Variations:
+		* Trade-off between feature matching loss and gram matrix loss
+		* Size of style image
+		* Multiple styles
 
 
 
 
-
-
-
-
+ 
