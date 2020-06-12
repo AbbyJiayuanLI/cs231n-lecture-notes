@@ -26,6 +26,8 @@ Other useful links:
 * [10. Recurrent Neural Networks](#10-recurrent-neural-networks)
 * [11. Detection and Segmentation](#11-detection-and-segmentation)
 * [12. Visualizing and Understanding](#12-visualizing-and-understanding)  
+* [13. Generative Models](#13-generative-models)
+
 
 ## Demos
 Here is the link for some official demos including:
@@ -532,6 +534,65 @@ L-BFGS —  stochasticity
 		* Multiple styles
 
 
+## 13. Generative Models
+
+* **Supervised Learning**
+With label
+Learning mapping from x to y
+Examples:
+Classification
+Regression
+Object detection
+Semantic segmentation
+Image captioning
+Unsupervised Learning
+Without label
+Learning underlying hidden structure
+Examples 
+Clustering
+PCA (dimension reduction)
+Feature learning
+Density estimation 
+Generative Models: P_data and P_model
+Explicit density estimation
+Implicit density estimation
+PixelRNN/CNN: tractable density function
+Attributes:
+Explicit density
+Fully visible belief nets
+Use chain rule to decompose likelihood into 1-d distributions
+Process:
+Initial from corner
+Spread with dependency modeled by RNN (LSTM) / CNN
+Training: maximize likelihood
+CNN faster than RNN
+Sequential generation slow
+Variational Auto-Encoders (VAE): intractable density function
+Optimize lower bound
+Auto Encoder: mapping from input to feature
+Linear + nonlinear 
+Deep, fully connected 
+ReLu, CNN
+Minimize difference between Encoder and decoder
+Latent z: feature representations 
+Bayesian 
+Initialize prior with Gaussian
+Obtain lower bound with log
+Maximize likelihood 
+Drawbacks: blurring and lower quality compared to GAN
+Generative Adversarial Networks (GAN)
+Implicit 
+Sample from simple distribution like random noise, and learn the transformation 
+Generator: gradient ascent - max p(discriminator is wrong)
+Discriminator: gradient ascent 
+Optimize minimax function
+Or choose proper objective function
+Process:
+Train discriminator 
+Train generator
+Convolution architecture 
+
+ 
 
 
  
