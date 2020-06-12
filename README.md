@@ -1,5 +1,5 @@
 # cs231n-lecture-notes
-This is the collection of my notes on the course [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) from Stanford University. 
+This is the collection of my notes (more like a framework) on the course [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) from Stanford University. 
 
 Notes are based on my summary and lecture materials. Some points are omitted due to time limitation. 
 
