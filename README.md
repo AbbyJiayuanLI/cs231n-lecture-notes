@@ -33,7 +33,7 @@ Other useful links:
 Here is the link for some official demos including:
 * [knn](http://vision.stanford.edu/teaching/cs231n-demos/knn/) 
 * [linear classification](http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/)
-* [t-SNE](https://cs.stanford.edu/people/karpathy/cnnembed/
+* [t-SNE](https://cs.stanford.edu/people/karpathy/cnnembed/)
     
 ## 1. Introduction
 
