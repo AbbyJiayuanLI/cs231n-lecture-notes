@@ -418,7 +418,7 @@ L-BFGS —  stochasticity
 
 ## 11. Detection and Segmentation
 
-* Classification + Localization
+* **Classification + Localization**:  single object
 	* Two FC: class scores and box coordinate
 * Pose Estimation
 * Regression Loss: continuous 
@@ -428,7 +428,7 @@ L-BFGS —  stochasticity
 	* Cross entropy
 	* Softmax
 	* SVM Loss
-* **Object Detection**
+* **Object Detection**: multiple objects
 	* Unknown nums of object
 	* Sliding 
 		* Hard to determine Block pos and range 
@@ -442,19 +442,18 @@ L-BFGS —  stochasticity
 			* Score 
 		* SSD (single shot detection)
 * **In summary, faster RNN is slower but more accurate then SSD**
-* Instance Segmentation
-	* Mask RCNN
-* **Semantic Segmentation**
+* **Semantic Segmentation**: no objects, only pixels
 	* Two caws within same block (cannot differentiate)
 	* Sliding window
-	* Stack of CNN / Fully Convolutional 
+	* **Stack of CNN / Fully Convolutional**: 
 		* Downsampling
 		* Upsampling 
 			* Nearest Neighbor
 			* Bed of Nails 
 			* Max unpooling
 			* Transpose convolution: learnable
-
+* **Instance Segmentation**: multiple objects, pixels
+	* Mask RCNN
 
 
 
