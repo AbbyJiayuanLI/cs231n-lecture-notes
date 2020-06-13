@@ -654,6 +654,51 @@ L-BFGS —  stochasticity
 		* Converge to local min
 
  
+## 15. Efficient Method and Hardware for DL
+
+* Challenge
+	* model size
+	* Speed 
+	* Energy efficiency 
+* Memory 
+* Algorithm vs hardware
+* Inference vs training 
+* Hardware
+* Number Representation
+* **Algorithm for efficient interference**
+	* **Pruning neural network**
+		* CNN: pruning and retraining 
+		* RNN and LSTM
+	* **Weight sharing**
+		* Clustering and use single weight representation
+		* SqueezeNet: Pruning + Trained Quantization + Huffman Coding 
+	* Quantization
+	* Low rank approximation
+		* Break 
+	* Binary/ternary net
+	* Winograd  transformation 
+* **Hardware for efficient interference**
+	* Google TPU
+	* Bandwidth 
+	* Eyeriss MIT
+	* DaDiannao
+	* EIE Standford
+		* Skip zero
+* **Algorithm for efficient training**
+	* Parallelization
+		* Data Parallel – Run multiple inputs in parallel
+		* Model Parallel
+		* Hyper-Parameter Parallel
+	* Mixed precision with FP16 and FP32
+	* Modeli distillation
+	* Model train small student model
+		* Soft label 
+	* DSD - Dense-Sparse-Dense Training 
+* **Hardware for efficient training**
+
+## Adversarial Examples and Adversarial Training
+
+
 
 
  
