@@ -27,6 +27,8 @@ Other useful links:
 * [11. Detection and Segmentation](#11-detection-and-segmentation)
 * [12. Visualizing and Understanding](#12-visualizing-and-understanding)  
 * [13. Generative Models](#13-generative-models)
+* [14. Reinforcement Learning](#14-reinforcement-learning)
+* [15. Efficient Method and Hardware for DL](#15-efficient-method-and-hardware-for-dl)
 
 
 ## Demos
@@ -592,6 +594,64 @@ L-BFGS —  stochasticity
 		* Train discriminator 
 		* Train generator
 	* Convolution architecture 
+
+ 
+## 14. Reinforcement Learning 
+
+* **Reinforcement Learning**
+	* Objective: learn actions through reward
+* **Markov Decision Process**
+	* Property:
+		* Current state completely defined the state of world
+	* Definition:
+		* (S, A, R, P, gamma)
+			* S:  set of possible state
+			* A: set of possible actions
+			* R: distribution of rewards given (state, action)
+			* P: transition probability 
+			* Gamma: discount factor
+	* Process: 
+		* Agent take Actions 
+		* Environment sample Reward
+		* Environment sample Next state 
+		* Agent receive rewards and next state 
+	* Policy pi
+* **Value function:** value function at state s is expected accumulative rewards from state s
+* **Q-value function:** q value function at state s and action a is expected accumulative rewards
+	* Satisfy bellman equation at optimal: current + next
+	* Solution:
+		* Value Iteration: Iterative update using Bellman Equation
+		* **Q-Learning:**
+			* use function approximator to estimate action-value function 
+			* Q(s, a; theta) = Q*(s, a)
+			* Minimize loss and update
+			* **Experience replay**
+		* **Policy Gradient:**
+			* hard to learn exact value of state-action pair
+			* Find optimal policy from a collection of policies without estimating q-value
+			* Estimate gradient with Monte Carlo sampling
+		* Variance reduction 
+			* Push up by cumulative rewards
+			* Use discount factor to ignore delayed effects 
+			* Baseline 
+				* Moving average of rewards
+				* Better than expected value:  Q() - V() is the scaling factor
+		* **Actor-Critics Algorithm:**
+			* Q-learning (critics) + gradient policy (actor)
+* Recurrent Attention Model (RAM):  REINFORCE
+	* Take a sequence of “glimpses” selectively focusing on regions of the image, to predict class
+		* Saves computational resources => scalability
+		* Able to ignore clutter / irrelevant parts of image
+	* Output distribution of actions
+* **In summary**
+	* Q-learning:
+		* Does not always work, but more sample-efficient when works
+		* Challenge: exploration
+		* No guarantee
+	* Policy gradient: 
+		* suffer from high variance and nuns of samples. 
+		* Challenge: sample-efficiency
+		* Converge to local min
 
  
 
