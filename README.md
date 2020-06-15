@@ -146,7 +146,7 @@ Here is the link for some official demos including:
     		min R(w)—>低复杂度
 		* 再单从定义上看，L1: R(w)=sum(|wi|)，L2: R(w)=sum(wi^2)，minimize R(w)时会使|wi|尽可能小。
     		Min R(w) —> min |wi|
-		* 所以问题就是 min |wi|为什么对应低复杂度？ 因为y=wx，如果有wi很大，那么对应的xi在变化很小的时候会引起剧烈的变化。而越简单的模型应该变化越小。
+		* 所以问题就是 min |wi|为什么对应低复杂度？ 因为y=wx，如果有wi很大，那么对应的xi在变化很小的时候会引起剧烈的变化。而越简单的模型应该变化越小。正则鼓励分类器最终将所有维度上的特征都用起来，而不是强烈依赖其中少数几个维度。
 
 
 ## 4. Neural Network and Back-Propagation
