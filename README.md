@@ -5,8 +5,8 @@ Notes are based on my summary and lecture materials. Some points are omitted due
 
 Other useful links:
 * Offical [Course Website](http://cs231n.stanford.edu/).
-* [Full Syllabus](http://cs231n.stanford.edu/syllabus.html) from course website in Bilibili.
-* [Course Video](https://www.bilibili.com/video/BV1nJ411z7fe?p=26) with English and Chinese caption. 
+* [Full Syllabus](http://cs231n.stanford.edu/syllabus.html) from course website.
+* [Course Video](https://www.bilibili.com/video/BV1nJ411z7fe?p=26) with English and Chinese caption in Bilibili. 
 * [Translated offical notes](https://zhuanlan.zhihu.com/p/21930884) in Chinese.
 * For detail notes, you may refer to [CS231n-2017-Summary](https://github.com/mbadry1/CS231n-2017-Summary) by [mbadry1](https://github.com/mbadry1). 
 * For assignemnts, you may refer to [Assignemnts](https://cs231n.github.io) and answer from [CS231n-2017](https://github.com/Burton2000/CS231n-2017) by [Burton2000](https://github.com/Burton2000).
