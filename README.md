@@ -1,5 +1,5 @@
 # cs231n-lecture-notes
-This is the collection of my notes (more like a framework) on the course [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) from Stanford University. 
+This is the collection of my notes (less detail, more like a framework) on the course [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) from Stanford University. 
 
 Notes are based on my summary and lecture materials. Some points are omitted due to time limitation. 
 
@@ -20,7 +20,7 @@ Other useful links:
 * [4. Neural Network and Back-Propagation](#4-neural-network-and-back-propagation)
 * [5. Convolutional Neural Network](#5-convolutional-neural-network)
 * [6. Training Neural Network-1](#6-training-neural-network-1)
-* [7. Training Neural Network-2](#6-training-neural-network-2)
+* [7. Training Neural Network-2](#7-training-neural-network-2)
 * [8. Deep Learning Software](#8-deep-learning-software)
 * [9. CNN Architectures](#9-cnn-architectures)
 * [10. Recurrent Neural Networks](#10-recurrent-neural-networks)
