@@ -138,7 +138,7 @@ Here is the link for some official demos including:
 * **Extra Notes:**
     * 关于稀疏解：https://zhuanlan.zhihu.com/p/50142573
 		* 从图像理解，L1用棱形逼近，解大多在坐标轴上 
-		* 从导数理解，绝对值导数突变（同理，绝对值相当于逼出来一个角），或者考虑梯度下降（不太懂）
+		* 从导数理解，绝对值导数突变,形成local min，或者考虑梯度下降（不太懂）
 		* 从先验概率分布角度解释，（后可研究，十分巧妙）
     * 关于复杂度和regularization：
 		* Minimize  L = Li (data loss) + lambda*R(w) (regularization)
